@@ -1,8 +1,7 @@
 services:
   es01:
     container_name: ragflow-es-01
-    profiles:
-      - elasticsearch
+
     image: elasticsearch:${STACK_VERSION}
     volumes:
       - esdata01:/usr/share/elasticsearch/data

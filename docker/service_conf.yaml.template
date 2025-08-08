@@ -10,8 +10,8 @@ ragflow:
 #  max_connections: 900
 #  stale_timeout: 300
 minio:
-  user: '${MINIO_USER:minioadmin}'
-  password: '${MINIO_PASSWORD:minioadmin#}'
+  user: '${MINIO_USER:-minioadmin}'
+  password: '${MINIO_PASSWORD:-minioadmin#}'
   host: '${MINIO_HOST:-minio}:9000'
 es:
   hosts: 'http://${ES_HOST:-host.docker.internal}:${ES_PORT:-19200}'

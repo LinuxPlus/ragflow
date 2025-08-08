@@ -1,6 +1,6 @@
 services:
   es01:
-    profiles: ["internal-es"]
+    profiles: ["disabled"]
     container_name: ragflow-es-01
 
     image: elasticsearch:${STACK_VERSION}
@@ -134,7 +134,7 @@ services:
     restart: on-failure
 
   postgres:
-    profiles: ["internal-postgres"]
+    profiles: ["disabled"]
     # mysql:5.7 linux/arm64 image is unavailable.
     image: postgres:16
     container_name: ragflow-postgres
@@ -159,7 +159,7 @@ services:
     restart: on-failure
 
   minio:
-    profiles: ["internal-minio"]
+    profiles: ["disabled"]
     image: quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
     container_name: ragflow-minio
     command: server --console-address ":9001" /data
